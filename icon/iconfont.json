@@ -1,0 +1,65 @@
+{
+  "id": "1408319",
+  "name": "Ai商城",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "705353",
+      "name": "文件共享",
+      "font_class": "wenjiangongxiang",
+      "unicode": "e62f",
+      "unicode_decimal": 58927
+    },
+    {
+      "icon_id": "714438",
+      "name": "搜索",
+      "font_class": "sousuo1",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
+    {
+      "icon_id": "1116102",
+      "name": "npm",
+      "font_class": "npm",
+      "unicode": "e88d",
+      "unicode_decimal": 59533
+    },
+    {
+      "icon_id": "1620909",
+      "name": "前端框架",
+      "font_class": "qianduankuangjia",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "4148882",
+      "name": "开发者门户",
+      "font_class": "kaifazhemenhu",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "5742992",
+      "name": "个人中心修改资料系统相册",
+      "font_class": "gerenzhongxinxiugaiziliaoxitongxiangce",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "8644348",
+      "name": "工单系统",
+      "font_class": "gongdanxitong-",
+      "unicode": "e618",
+      "unicode_decimal": 58904
+    },
+    {
+      "icon_id": "8933701",
+      "name": "OPEN-API平台",
+      "font_class": "OPEN-APIpingtai",
+      "unicode": "e6fa",
+      "unicode_decimal": 59130
+    }
+  ]
+}

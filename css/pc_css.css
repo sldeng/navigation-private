@@ -1,0 +1,275 @@
+
+/* CSS Document */
+html, body, div, span, object, iframe,h1, h2,
+h3, h4, h5, h6, p, blockquote, pre,abbr, address, cite, code,del, dfn,
+em, img, ins,kbd, q, samp,small, strong, sub, sup, var,b, i,dl, dt, dd,
+ol, ul, li,fieldset, form, label, legend,table, caption, tbody,
+tfoot,thead,tr, th, td,article, aside, canvas, details, figcaption,
+figure, footer, header, hgroup, menu, nav, section, summary,time, mark,
+audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    outline-style:none;/*FF*/
+}
+
+body {
+    line-height:1;
+}
+
+a{
+    margin:0;
+    padding:0;
+    border:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+
+}
+a:hover,a:focus{
+    text-decoration:none;
+    bblr:expression(this.onFocus=this.blur());/*IE*/
+    outline-style:none;/*FF*/
+    }
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+ol,ul {list-style:none;}
+li{list-style-type:none;}
+img{border:0;vertical-align:middle}
+input, select {
+    vertical-align:middle;
+}
+
+/*css为clearfix，清除浮动*/
+.clearfix::before,
+.clearfix::after{
+    content: "";
+    height: 0;
+    line-height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+.clearfix:after{clear:both;}
+.clearfix{
+    *zoom:1;/*IE/7/6*/
+}
+body,html{
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.container{
+    height: 100%;
+    width: 100%;
+    background: url(../m_b_v2.jpg) #202124 0 0 no-repeat;
+    background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -webkit-background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+.search-top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+.search-content{
+    width: 80%;
+    text-align: center;
+    margin-bottom: 90px;
+}
+.search-top img{
+    height: 80px;
+    width: 80px;
+    display: inline-block;
+    margin-right: 30px;
+}
+.search-input{
+    position: relative;
+}
+.search-input input {
+    border: 1px solid #ffc400;
+    height: 2.8125rem;
+    padding: 0.1rem 0.5rem;
+    width: 55%;
+    font-family: inherit;
+    background-color: transparent;
+    color: #ffc400;
+}
+.search-input input::placeholder{
+    color: #ffc400;
+}
+.search-input input:focus{
+    border: 1px solid #ffc400;
+}
+.search-input input:hover{
+    /* border: 1px solid #ffc400 !important; */
+    
+}
+
+.search-input>span{
+    background-color: transparent;
+    border: medium none;
+    color: #ffffff;
+    margin-left: -2.75rem;
+    vertical-align: middle;
+    font-size: 30px;
+    cursor: pointer;
+    color: #ffc400;
+}
+footer{
+    position: absolute;
+    bottom: 20px;
+    color: #ffc400;
+    text-align: center;
+}
+.content-list{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.search-top h3{
+    font-size: 28px;
+    color: #ffc400;
+}
+.search-top h3 span {
+    font-size: 12px;
+}
+.list-li{
+    display: flex;
+    width: 25%;
+    height: 80px;
+    cursor: pointer;
+    /* display: inline-block; */
+    text-decoration: none;
+}
+.list-li:hover{
+    transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+}
+.list-li .iconfont{
+    font-size: 70px;
+    color: #ffc400;
+}
+.li-right {
+    color:#ffc400cf;
+}
+.li-right p{
+   width: 230px;
+   overflow:hidden; /*超出宽度部分的隐藏*/
+    white-space:nowrap; /*文字不换行*/
+    text-overflow:ellipsis;
+    font-size: 13px;
+}
+.li-right h5{
+    margin-bottom: 8px;
+    font-size: 18px;
+    
+}
+.li-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 8px;
+}
+.navigation-content{
+    width: 92%;
+}
+#menu {
+    width:300px;
+    opacity: 0.9;
+    border-radius: 4px;
+    background: #fff;
+    position: absolute;
+    display: none;
+    padding: 15px 0;
+}
+#menu li{
+    padding: 15px;
+    cursor: pointer;
+}
+.ui-box {
+    text-decoration:none;
+    border:none;
+    font-family:'Roboto', sans-serif;
+    font-size:14px;
+    position:relative;
+    vertical-align:baseline;
+    padding:10px
+}
+.bottom-inOutSpread:before,.bottom-inOutSpread:after,.bottom-inOutSpread>.ui-border-element:before,.bottom-inOutSpread>.ui-border-element:after {
+    content:'';
+    position:absolute
+}
+.bottom-inOutSpread:after {
+    border-bottom:2px solid #ffc400;
+    left:51%;
+    right:51%;
+    bottom:0px;
+    -webkit-transition-property:all;
+    -moz-transition-property:all;
+    -o-transition-property:all;
+    transition-property:all;
+    -webkit-transition-timing-function:cubic-bezier(0, 0.98, 0.51, 0.93);
+    -moz-transition-timing-function:cubic-bezier(0, 0.98, 0.51, 0.93);
+    -o-transition-timing-function:cubic-bezier(0, 0.98, 0.51, 0.93);
+    transition-timing-function:cubic-bezier(0, 0.98, 0.51, 0.93);
+    -webkit-transition-duration:300ms;
+    -moz-transition-duration:300ms;
+    -o-transition-duration:300ms;
+    transition-duration:300ms;
+    -webkit-transition-delay:0s;
+    -moz-transition-delay:0s;
+    -o-transition-delay:0s;
+    transition-delay:0s
+}
+.bottom-inOutSpread:hover:after {
+    left:0%;
+    right:0%
+}
+.bottom-inOutSpread:not(:hover):after {
+    -webkit-transition-delay:0s;
+    -moz-transition-delay:0s;
+    -o-transition-delay:0s;
+    transition-delay:0s
+}
+.wrapper{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .5;
+    background: #000;
+    z-index: 9998;
+    display: none;
+}
+.topo{
+    position: absolute;
+    width: 80%;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 9999;
+    display: none;
+}
+.topo img{
+    display: block;
+    height: 100%;
+    width: 100%;
+}

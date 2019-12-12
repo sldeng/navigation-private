@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>demo</title>
+    <link rel="stylesheet" href="./css/pc_css.css">
+    <link rel="stylesheet" href="./icon/iconfont.css">
+</head>
+
+<body>
+    <div class="wrapper" onclick="hideWrapper()"></div>
+    <div class="topo"><img src="./topology.jpg" alt=""></div>
+    <div class="container">
+        <div class="search-content">
+            <div class="search-top">
+                <img src="./logo.fw.png" alt="电信知识管理平台">
+                <h3> ct-km.com <span>(China Telecom - Knowledge Management)</span> </h3>
+            </div>
+            <div class="search-input">
+                <input type="text" placeholder="电信知识管理平台任你搜索">
+                <span class="iconfont icon-sousuo1"></span>
+            </div>
+        </div>
+        <div class="navigation-content">
+            <div class="content-list" id="content-fuck">
+            </div>
+        </div>
+        <footer> Copyright &copy; FE lib（前端实验室）<br> <br>为保证各服务安全性，所有服务暂时仅限于公司银汇网络访问</footer>
+    </div>
+    
+    <div id="menu">
+        <ul class="unique-ui">
+            <li class="ui-box bottom-inOutSpread" onclick="randomBg('random')">随机背景</li>
+            <li class="ui-box bottom-inOutSpread" onclick="showTopo()">显示topo</li>
+            <li class="ui-box bottom-inOutSpread">暂定</li>
+        </ul>
+    </div>
+    <script src="./js/data.js"></script>
+    <script src="./js/index.js"></script>
+    <script>
+        const container = document.getElementsByClassName('container')[0];
+        const wrapper = document.getElementsByClassName('wrapper')[0];
+        const topo  = document.getElementsByClassName('topo')[0];
+        const ICON_CLASS_LIST = ['icon-wenjiangongxiang', 'icon-gongdanxitong-',
+            'icon-gerenzhongxinxiugaiziliaoxitongxiangce', 'icon-kaifazhemenhu', 'icon-OPEN-APIpingtai',
+            'icon-npm', 'icon-qianduankuangjia'
+        ]
+        let htmlStr = '';
+        data.list.forEach((element, index) => {
+            element.icon_class = ICON_CLASS_LIST[index]
+            const str = JSON.stringify(element)
+            htmlStr += `<a class="list-li" href="${element.url}" target="_blank"> 
+                    <div class="li-left"> 
+                        <span class=" iconfont ${element.icon_class}"> </span> 
+                        </div> 
+                        <div class="li-right"> 
+                        <h5>${element.name} </h5> 
+                        <p title="${element.desc}"> ${element.desc}  </p> 
+                         </div> 
+                        </a>`
+        });
+        htmlStr += ` <a class="list-li" style="visibility:hidden">
+                        <div class="li-left">
+                            <!-- <span class=" iconfont  icon-wenjiangongxiang"> </span> -->
+                        </div>
+                        <div class="li-right">
+                            <!-- <h5>文件分享</h5>
+                            <p>设计稿、文件资料等共享访问服务</p> -->
+                        </div>
+                    </a>`
+        const contentFuck = document.getElementById('content-fuck');
+        contentFuck.innerHTML = htmlStr;
+        document.oncontextmenu = function (ev) {
+            ev.preventDefault();
+            var ev = ev || event;
+            var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            menu.style.display = "block";
+            menu.style.left = ev.clientX + "px";
+            menu.style.top = ev.clientY + scrollTop + "px";
+            var ulit = document.getElementsByClassName('unique-ui')
+        }
+        document.onclick = () => { hideMenu() }
+     
+        function randomBg(event) {
+            const BGLIST = [
+                "../m_b_v2.jpg",
+                "../Lark20191017-110859.jpeg",
+                "../191031_prbanner.jpg",
+            ];
+
+            let index = Math.floor(Math.random() * 3);
+            let img = BGLIST[index];
+            container.style.background="url("+img+")";
+        }
+        function showTopo(){
+            wrapper.style.display ='block';
+            topo.style.display = 'block'
+        }
+        const hideMenu = () => { menu.style.display = 'none' };
+        const hideWrapper = () => { 
+            wrapper.style.display ='none';
+            topo.style.display = 'none'}
+
+    </script>
+</body>
+
+</html>
